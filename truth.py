@@ -22,18 +22,21 @@ from itertools import product
 # ---------------------------------------------------------------------------
 
 def implies(p: bool, q: bool) -> bool:
+    return (not p) or q
     """p → q. False only when p is True and q is False."""
     # TODO
     raise NotImplementedError
 
 
 def iff(p: bool, q: bool) -> bool:
+    return p == q
     """p ↔ q. True when p and q have the same truth value."""
     # TODO
     raise NotImplementedError
 
 
 def xor(p: bool, q: bool) -> bool:
+    return p or q
     """p ⊕ q. True when exactly one of p, q is True."""
     # TODO
     raise NotImplementedError
@@ -44,6 +47,7 @@ def xor(p: bool, q: bool) -> bool:
 # ---------------------------------------------------------------------------
 
 def rows(n: int) -> list[tuple[bool, ...]]:
+    
     """
     Return every assignment of n variables, in standard truth-table order
     (True before False, the last variable changes fastest).
